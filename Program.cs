@@ -85,9 +85,33 @@ namespace HelloWorld
 
             // *******************************************************************
 
-            Console.WriteLine(Math.Round(9.99));
+            // Console.WriteLine(Math.Round(9.99));
 
+            // *******************************************************************
 
+            // string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            // Console.WriteLine("The length of the txt string is: " + txt.Length);
+
+            // string txt = "Hello World";
+            // Console.WriteLine(txt.ToUpper());   // Outputs "HELLO WORLD"
+            // Console.WriteLine(txt.ToLower());   // Outputs "hello world"
+
+            // *******************************************************************
+
+            // string firstName = "John ";
+            // string lastName = "Doe";
+            // string name = string.Concat(firstName, lastName);
+            // Console.WriteLine(name);
+
+            // string firstName = "John";
+            // string lastName = "Doe";
+            // string name = $"My full name is: {firstName} {lastName}";
+            // Console.WriteLine(name);
+
+            string txt = "We are the so-called \"Vikings\" from the north.";
+            Console.WriteLine(txt);
+
+            // *******************************************************************
 
 
 
