@@ -1,15 +1,5 @@
 ﻿
 
-
-
-
-
-
-
-
-
-
-
 // double myDouble = 9.78D;
 // int myInt = (int)myDouble;    // Manual casting: double to int
 
@@ -378,17 +368,204 @@
 
 
 
-class Car
-{
-  string color = "red";
-  int year = 2020;
-  static void Main(string[] args)
-  {
-    Car myObj1 = new Car();
-    Console.WriteLine(myObj1.color);
-    Console.WriteLine(myObj1.year);
-    Vehicle myVehicle = new Vehicle();
-    Console.WriteLine(myVehicle.marke);
-    Console.WriteLine(myVehicle.year);
-  }
-}
+// class Car
+// {
+//   string color = "red";
+//   int year = 2020;
+//   static void Main(string[] args)
+//   {
+//     Car myObj1 = new Car();
+//     Console.WriteLine(myObj1.color);
+//     Console.WriteLine(myObj1.year);
+//     Vehicle myVehicle = new Vehicle();
+//     Console.WriteLine(myVehicle.marke);
+//     Console.WriteLine(myVehicle.year);
+//   }
+// }
+
+
+// Car Ford = new Car();
+// Ford.model = "Mustang";
+// Ford.color = "red";
+// Ford.year = 1969;
+
+// Car Opel = new Car();
+// Opel.model = "Astra";
+// Opel.color = "white";
+// Opel.year = 2005;
+
+// Console.WriteLine(Ford.model);
+// Console.WriteLine(Opel.model);
+// Console.WriteLine(Opel.year);
+
+//**************************************************************************************************
+
+
+// class Car
+// {
+//   public string model;
+//   public string color;
+//   public int year;
+
+//   // Create a class constructor with a parameter
+//   public Car(string modelName, int modelYear, string modelColor)
+//   {
+//     model = modelName;
+//     year = modelYear;
+//     color = modelColor;
+//   }
+
+//   static void Main(string[] args)
+//   {
+//      Car Ford = new Car("Mustang", 2020,"White");
+//      Console.WriteLine(Ford.model);
+//      Console.WriteLine(Ford.year);
+//      Console.WriteLine(Ford.color);
+//      Console.WriteLine(Ford.color + "  " + Ford.year+ "   " + Ford.color);
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//****************************ENCAPSULATION*******************************
+
+// class Person
+// {
+//   private string name; // field
+//   public string Name   // property
+//   {
+//     get { return name; }
+//     set { name = value; }
+//   }
+// }
+
+// class Program
+// {
+//   static void Main(string[] args)
+//   {
+//     Person myObj = new Person();
+//     myObj.Name = "John";
+//     Console.WriteLine(myObj.Name);
+//   }
+// }
+
+//*******************************INHERITANCE****************************
+
+// class Vehicle  // base class (parent) 
+// {
+//   public string brand = "Ford";  // Vehicle field
+//   public void honk()             // Vehicle method 
+//   {                    
+//     Console.WriteLine("Tuut, tuut!");
+//   }
+// }
+
+// class Car : Vehicle  // derived class (child)
+// {
+//   public string modelName = "Mustang";  // Car field
+// }
+
+// class Program
+// {
+//   static void Main(string[] args)
+//   {
+//     // Create a myCar object
+//     Car myCar = new Car();
+
+//     // Call the honk() method (From the Vehicle class) on the myCar object
+//     myCar.honk();
+
+//     // Display the value of the brand field (from the Vehicle class) and the value of the modelName from the Car class
+//     Console.WriteLine(myCar.brand + " " + myCar.modelName);
+//   }
+// }
+
+
+//****************************************POLYMORPHISM***************************************
+
+
+// class Animal  // Base class (parent) 
+// {
+//   public virtual void  animalSound() 
+//   {
+//     Console.WriteLine("The animal makes a sound");
+//   }
+// }
+
+// class Pig : Animal  // Derived class (child) 
+// {
+//   public override void animalSound() 
+//   {
+//     Console.WriteLine("The pig says: wee wee");
+//   }
+// }
+
+// class Dog : Animal  // Derived class (child) 
+// {
+//   public override void animalSound() 
+//   {
+//     Console.WriteLine("The dog says: bow wow");
+//   }
+// }
+
+// class Program 
+// {
+//   static void Main(string[] args) 
+//   {
+//     Animal myAnimal = new Animal();  // Create a Animal object
+//     Animal myPig = new Pig();  // Create a Pig object
+//     Animal myDog = new Dog();  // Create a Dog object
+
+//     myAnimal.animalSound();
+//     myPig.animalSound();
+//     myDog.animalSound();
+//   }
+// }
+
+//********************************************ABSTRACTION*********************************************
+
+// namespace MyApplication
+// {
+//   // Abstract class
+//   abstract class Animal
+//   {
+//     // Abstract method (does not have a body)
+//     public abstract void animalSound();
+//     // Regular method
+//     public void sleep()
+//     {
+//       Console.WriteLine("Zzz");
+//     }
+//   }
+  
+//   // Derived class (inherit from Animal)
+//   class Pig : Animal
+//   {
+//     public override void animalSound()
+//     {
+//       // The body of animalSound() is provided here
+//       Console.WriteLine("The pig says: wee wee");
+//     }
+//   }
+
+//   class Program
+//   {
+//     static void Main(string[] args)
+//     {
+//       Pig myPig = new Pig();  // Create a Pig object
+//       myPig.animalSound();
+//       myPig.sleep();
+//     }
+//   }
+// }
